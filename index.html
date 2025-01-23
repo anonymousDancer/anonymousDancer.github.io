@@ -248,14 +248,15 @@
         </head>
         <body>
           <main>
-            <section class="py-2 text-center container">
-              <div class="row py-lg-5">
-                <div class="col-lg-8 col-md-8 mx-auto">
-                  <h1>DanceMosaic: Multimodality Masked Dance Generation</h1>
-                  <h5>Anonymous</h5>
-                </div>
-              </div>
-			  <section class="hero-image border d-flex align-items-center justify-content-center" style="background-image: url('./assets/hero-image.jpg'); height: 40vh; background-size: cover; background-position: center;"> Landing Page Image</section>
+			<section class="py-2 text-center container">
+				<div class="row py-lg-5">
+					<div class="col-lg-8 col-md-8 mx-auto">
+						<h1>DanceMosaic: Multimodality Masked Dance Generation</h1>
+						<h5>Anonymous</h5>
+					</div>
+				</div>
+				<section class="hero-image border d-flex align-items-center justify-content-center" style="background-image: url('./assets/hero-image.jpg'); height: 40vh; background-size: contain; background-repeat: no-repeat; background-position: center;"> Landing Page Image</section>
+			</section>
 			<section id="about" class="py-4 text-center container">
 					<div class="col-lg-12 col-md-8 mx-auto">
 						<p class="lead"> DanceMosaic is a novel multimodal controllable architecture designed to generate 3D dance movements precisely synchronized with both textual descriptions and musical rhythms. Generating dance sequences computationally presents significant challenges in fields like movie production, game design to virtual reality and interactive animation systems, requiring a seamless integration of artistic expression, precise motion control, and synchronization with music. To address these complexities and reduce the strain on choreographers and editors, we introduce DanceMosaic, a novel multimodal controllable architecture designed to generate 3D dance movements precisely synchronized with both textual descriptions and musical rhythms. At the core, DanceMosaic introduces three key innovations: (i) a controllable mask modeling technique that dynamically balances input contributions, ensuring consistent alignment across modalities; (ii) a MGMDM module, which learns music priors to enhance synchronization and rhythm fidelity in generated dances; and (iii) an ChoreoControl module, providing user-controlled joint constraints, allowing for flexible modifications such as upper body editing. These components, combined with an efficient decoding framework, allow for high-speed, expressive dance generation. It enables features such as in-betweening, long dance sequences, and the generation of mixed genres. Experimental results shows 50% improvement in FID on the FineDance dataset, producing realistic, expressive dance sequences aligned with both musical cues and textual prompts, outperforming current state-of-the-art methods across single and multimodal tasks.</p>
