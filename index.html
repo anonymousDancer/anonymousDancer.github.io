@@ -251,16 +251,15 @@
 			<section class="py-2 text-center container">
 				<div class="row py-lg-5">
 					<div class="col-lg-8 col-md-8 mx-auto">
-						<h1>DanceMosaic: Multimodality Masked Dance Generation</h1>
+						<h1>DanceMosaic: High-Fidelity Dance Generation with Multimodal Editability</h1>
 						<h5>Anonymous</h5>
 					</div>
 				</div>
-				<section class="hero-image d-flex align-items-center justify-content-center" style="background-image: url('./assets/hero-image.png'); height: 50vh; background-size: contain; background-repeat: no-repeat; background-position: center;"> </section>
+				<section class="hero-image d-flex align-items-center justify-content-center" style="background-image: url('./assets/Screenshot\ 2025-03-07\ 135715.png'); height: 50vh; background-size: contain; background-repeat: no-repeat; background-position: center;"> </section>
 			</section>
 			<section id="about" class="py-4 text-center container">
 					<div class="col-lg-12 col-md-8 mx-auto">
-						<p class="lead"> Recent advancements in dance generation have enabled the synthesis of realistic 3D dance motions. However, existing methods mainly focus on generating dance sequence conditioned on music input. This paper proposes DanceMosaic, a novel dance synthesis framework that can generate aesthetically pleasing dance movements conditioned on multimodal control signals including music, text and pose. DanceMosaic comprises two key components: (1) dance motion tokenizer, which converts 3D dance motion in the continuous euclidean space to a sequence of motion tokens in the discrete latent space, and (2) a triple-stream masked motion model, which learn the probabilistic mapping from multimodal control signals to the motion token sequence by fusing three conditioned masked transformer in parallel. Each of masked transformers learns to predict randomly masked motion tokens, conditioned on a single control modality. DanceMosaic is trained via multimodal progressive training strategy, which incrementally integrates modalities into the motion latent space to mitigate training complexity and multi-condition conflicts. To further enhance the motion generation quality, we proposed an inference-time optimization mechanism that directly refines the motion tokens to enforce the alignment between the generated motions and the multimodal guidance. Extensive experiments demonstrate that our method outperforms state-of-the-art approaches in motion fidelity, control precision, and inference efficiency.</p>
-					</div>
+						<p class="lead"> Recent advances in dance generation have enabled automatic synthesis of 3D dance motions. However, existing methods still struggle to produce high-fidelity dance sequences that simultaneously deliver exceptional realism, precise dance–music synchronization, high motion diversity, and physical plausibility. Moreover, existing methods lack the flexibility to edit dance sequences according to diverse guidance signals, such as musical prompts, pose constraints, action labels, and genre descriptions, significantly restricting their creative utility and adaptability. Unlike the existing approaches, DanceMosaic enables fast and high-fidelity dance generation, while allowing multimodal motion editing. Speciically, we propose a multimodal masked motion model that fuses the text-to-motion model with music and pose adapters to learn probabilistic mapping from diverse guidance signals to high-quality dance motion sequences via progressive generative masking training.  To further enhance the motion generation quality, we propose multimodal classifer-free guidance and inference-time optimization mechanism that further enforce the alignment between the generated motions and the multimodal guidance. Extensive experiments demonstrate that our method outperforms state-of-the-art approaches in motion fidelity, motion, and inference efficiency. </div>
 			</section>
               <section class="py-5 text-center container">
                   <div class="col-lg-8 col-md-8 mx-auto">
@@ -272,14 +271,14 @@
                 <div class="container">
                   <div class="row">
                     <div class="col">
-                      <h5>Krump Dance</h5>
+                      <h5>Classic Shenyun</h5>
                     </div>
                   </div>
                   <div class="row row-cols-3">
                     <div class="col">
                       <div class="card">
                         <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/ours/new_gKR_sBM_cAll_d28_mKR0_ch02_0.mkv" type="video/mp4">
+                          <source src="./assets/ours/031_343_ClassicShenyun.mp4" type="video/mp4">
                         </video>
                         <div class="card-body  mmm-card">
                           <p class="card-text">
@@ -294,21 +293,21 @@
                     <div class="col">
                       <div class="card h-100 shadow-sm">
                         <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/edge/new_gKR_sBM_cAll_d28_mKR0_ch02_0.mkv" type="video/mp4">     </video>
+                          <source src="./assets/lodge/031_343.mp4" type="video/mp4">
+                        </video>
                         <div class="card-body">
-                          <p class="card-text">EDGE</p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                          <p class="card-text">LODGE</p>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card h-100 shadow-sm">
                         <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/lodge/new_gKR_sBM_cAll_d28_mKR0_ch02_0.mkv" type="video/mp4">
-                        </video>
+                          <source src="./assets/edge/031_343.mp4" type="video/mp4">     </video>
                         <div class="card-body">
-                          <p class="card-text">LODGE</p>
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
                         </div>
                       </div>
                     </div>
@@ -319,277 +318,14 @@
                 <div class="container">
                   <div class="row">
                     <div class="col">
-                      <h5>HipHop Dance</h5>
+                      <h5>Folk Miao</h5>
                     </div>
                   </div>
                   <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
                     <div class="col">
                       <div class="card h-100 shadow-sm">
                         <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/ours/new_gLH_sFM_cAll_d16_mLH0_ch01_49.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body  mmm-card">
-                          <p class="card-text">
-                            <strong>DanceMosaic (our)</strong>
-                          </p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/edge/new_gLH_sFM_cAll_d16_mLH0_ch01_49.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                          <p class="card-text">EDGE</p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/lodge/new_gLH_sFM_cAll_d16_mLH0_ch01_49.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                          <p class="card-text">LODGE</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="album margin100">
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <h5>MIAO Dance</h5>
-                    </div>
-                  </div>
-                  <div class="row row-cols-3">
-                    <div class="col">
-                      <div class="card">
-                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/ours/new_077_343.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body  mmm-card">
-                          <p class="card-text">
-                            <strong>DanceMosaic (our)</strong>
-                            </strong>
-                          </p>
-                          <!-- <p class="card-text"></p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/edge/new_077_343.mkv" type="video/mp4">     </video>
-                        <div class="card-body">
-                          <p class="card-text">EDGE</p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/lodge/new_077_343.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                          <p class="card-text">LODGE</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="album margin100">
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <h5>ShenYun Dance</h5>
-                    </div>
-                  </div>
-                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/ours/new_022_294.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body  mmm-card">
-                          <p class="card-text">
-                            <strong>DanceMosaic (our)</strong>
-                          </p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/edge/new_022_294.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                          <p class="card-text">EDGE</p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/lodge/new_022_294.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                          <p class="card-text">LODGE</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="album margin100">
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <h5>Pop Dance</h5>
-                    </div>
-                  </div>
-                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/ours/new_003_2205_2.mkv" type="video/mp4">      </video>
-                        <div class="card-body  mmm-card">
-                          <p class="card-text">
-                            <strong>DanceMosaic (our)</strong>
-                          </p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/edge/new_003_2205.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                          <p class="card-text">EDGE</p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motionlcm_circle" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/lodge/new_003_2205.mkv" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                          <p class="card-text">LODGE</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-			  <section class="py-5 text-center container">
-				<div class="col-lg-8 col-md-8 mx-auto">
-				  <h2> Text-Controlled Dance Editing </h2>
-				</div>
-			</section>
-			<div class="album text-center margin100 bg-body-tertiary">
-			  <div class="container">
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-				  <div class="col">
-					<div class="card h-100 shadow-sm">
-					  <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
-						<source src="./assets/edit/original_text.mkv" type="video/mp4">
-					  </video>
-					  <div class="card-body">
-						<p class="card-text">Original</p>
-						<div class="d-flex justify-content-between align-items-center">
-						  <small class="text-body-secondary"></small>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="col">
-					<div class="card h-100 shadow-sm">
-					  <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
-						<source src="./assets/edit/0-25_person_jumps.mkv" type="video/mp4">
-					  </video>
-					  <div class="card-body">
-						<p class="card-text">A person jumps high: 1s to 3s  </p>
-						<div class="d-flex justify-content-between align-items-center">
-						  <small class="text-body-secondary"></small>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="col">
-					<div class="card h-100 shadow-sm">
-					  <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
-						<source src="./assets/edit/25-50_person_kicks.mkv" type="video/mp4">
-					  </video>
-					  <div class="card-body">
-						<p class="card-text">the person kicks: 3s to 4s</p>
-						<div class="d-flex justify-content-between align-items-center">
-						  <small class="text-body-secondary"></small>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>
-              <section class="py-5 text-center container">
-                <div class="row py-lg-5">
-                  <div class="col-lg-8 col-md-8 mx-auto">
-                    <h2> Joint-Controlled Dance
-                    </h2>
-                  </div>
-                </div>
-              </section>
-              <div class="album bg-body-tertiary">
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <h5>Pelvis Joint</h5>
-                    </div>
-                    <div class="col">
-                      <h5>Upper-body Editing(constraint on lower-body)</h5>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/edit/pelvis_joint.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body  mmm-card">
-                          <p class="card-text">
-                            <strong>DanceMosaic (our)</strong>
-                          </p>
-                          <!-- <p class="card-text">a person walks with support</p> -->
-                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col">
-                      <div class="card h-100 shadow-sm">
-                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
-                          <source src="./assets/edit/lower_body.mp4" type="video/mp4">
+                          <source src="./assets/ours/077_686_folk_miao_fuct.mp4" type="video/mp4">
                         </video>
                         <div class="card-body  mmm-card">
                           <p class="card-text">
@@ -601,38 +337,420 @@
                       </div>
                     </div>
                     
-                  </div>
-                </div>
-              </div>
-              <div class="album bg-body-tertiary">
-                <div class="container">
-                  <div class="row d-flex justify-content-center align-items-center">
                     <div class="col">
-                      <h5>Long Dance Generation</h5>
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/077_686.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
                     </div>
-					<div class="col">
-						<div class="card h-100 shadow-sm">
-						  <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
-							<source src="./assets/edit/output3.mp4" type="video/mp4">
-						  </video>
-						  <div class="card-body  mmm-card">
-							<p class="card-text">
-							  <strong>DanceMosaic (our)</strong>
-							</p>
-							<!-- <p class="card-text">a person walks with support</p> -->
-							<!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
-						  </div>
-						</div>
-					  </div>
-                  </div>
-                  <div class="row">
-                    <div class="col"></div>                   
-
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/077_686.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              
+              <div class="album margin100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Street Locking</h5>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3">
+                    <div class="col">
+                      <div class="card">
+                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/ours/068_882_street_locking_fuct.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body  mmm-card">
+                          <p class="card-text">
+                            <strong>DanceMosaic (our)</strong>
+                            </strong>
+                          </p>
+                          <!-- <p class="card-text"></p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/068_882.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/068_882.mp4" type="video/mp4">     </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="album margin100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Street Jazz</h5>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/ours/124_2450_street_jazz_fuct_cropped.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body  mmm-card">
+                          <p class="card-text">
+                            <strong>DanceMosaic (our)</strong>
+                          </p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/124_2450.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/124_2450.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="album margin100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Street Pop</h5>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/ours/054_98_street_popping.mp4" type="video/mp4">      </video>
+                        <div class="card-body  mmm-card">
+                          <p class="card-text">
+                            <strong>DanceMosaic (our)</strong>
+                          </p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motionlcm_circle" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/054_98.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/054_98.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="album margin100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Street HipHop</h5>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/ours/096_392_street_hiphop_fuct.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body  mmm-card">
+                          <p class="card-text">
+                            <strong>DanceMosaic (our)</strong>
+                          </p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/096_392.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/096_392.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section class="py-5 text-center container">
+                <div class="col-lg-8 col-md-8 mx-auto">
+                  <h2> AIST++ Dance compared with SOTA 
+                  </h2>
+                </div>
             </section>
+              <div class="album margin100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Break Dance</h5>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/ours/gBR_sFM_cAll_d05_mBR4_ch11_49.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body  mmm-card">
+                          <p class="card-text">
+                            <strong>DanceMosaic (our)</strong>
+                          </p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/gBR_sFM_cAll_d05_mBR4_ch11_49.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/gBR_sFM_cAll_d05_mBR4_ch11_49.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="album margin100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Krump Dance</h5>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/ours/gKR_sFM_cAll_d28_mKR4_ch05_98.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body  mmm-card">
+                          <p class="card-text">
+                            <strong>DanceMosaic (our)</strong>
+                          </p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/gKR_sFM_cAll_d28_mKR4_ch05_98.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/gKR_sFM_cAll_d28_mKR4_ch05_98.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="album margin100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5>LA HipHop</h5>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/ours/gLH_sFM_cAll_d16_mLH1_ch02_196.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body  mmm-card">
+                          <p class="card-text">
+                            <strong>DanceMosaic (our)</strong>
+                          </p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/gLH_sFM_cAll_d16_mLH1_ch02_196.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/gLH_sFM_cAll_d16_mLH1_ch02_196.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="album margin100">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Waack Dance</h5>
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/ours/gWA_sFM_cAll_d27_mWA3_ch18_147.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body  mmm-card">
+                          <p class="card-text">
+                            <strong>DanceMosaic (our)</strong>
+                          </p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motionclm" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/lodge/gWA_sFM_cAll_d27_mWA3_ch18_147.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">LODGE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 shadow-sm">
+                        <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                          <source src="./assets/edge/gWA_sFM_cAll_d27_mWA3_ch18_147.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                          <p class="card-text">EDGE</p>
+                          <!-- <p class="card-text">a person walks with support</p> -->
+                          <!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">( lunges posture and hand posture while doing lunges is more realistic than ground truth)</small></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </main>
           <script>
             // Function to update the timeline for any video
