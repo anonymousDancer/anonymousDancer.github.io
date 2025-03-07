@@ -261,9 +261,131 @@
 					<div class="col-lg-12 col-md-8 mx-auto">
 						<p class="lead"> Recent advances in dance generation have enabled automatic synthesis of 3D dance motions. However, existing methods still struggle to produce high-fidelity dance sequences that simultaneously deliver exceptional realism, precise dance–music synchronization, high motion diversity, and physical plausibility. Moreover, existing methods lack the flexibility to edit dance sequences according to diverse guidance signals, such as musical prompts, pose constraints, action labels, and genre descriptions, significantly restricting their creative utility and adaptability. Unlike the existing approaches, DanceMosaic enables fast and high-fidelity dance generation, while allowing multimodal motion editing. Speciically, we propose a multimodal masked motion model that fuses the text-to-motion model with music and pose adapters to learn probabilistic mapping from diverse guidance signals to high-quality dance motion sequences via progressive generative masking training.  To further enhance the motion generation quality, we propose multimodal classifer-free guidance and inference-time optimization mechanism that further enforce the alignment between the generated motions and the multimodal guidance. Extensive experiments demonstrate that our method outperforms state-of-the-art approaches in motion fidelity, motion, and inference efficiency. </div>
 			</section>
+      <section class="py-5 text-center container">
+        <div class="col-lg-8 col-md-8 mx-auto">
+          <h2> Influence of Music Guidance (w<sub>A</sub>) </h2>
+        </div>
+    </section>
+    <div class="album text-center bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="row row-cols-1">
+          <div class="col mx-auto">
+            <div class="card h-100 shadow-sm mx-auto" style="width: fit-content;">
+              <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline class="mx-auto" height="100%">
+                <source src="./assets/edit/output_w_audio.mkv" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <p class="card-text">
+                  This experiment shows the impact of Music Guidance Scale on Generated Dance Motion. <br/>
+                  It is visible that w<sub>A</sub> effectivly aligns motion with music. <br/>
+                  The video on the left is while using w<sub>A</sub> = 1, and videos on the right gradually increase w<sub>A</sub> from 0 to 0.5<br/>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-body-secondary"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <section class="py-5 text-center container">
+        <div class="col-lg-8 col-md-8 mx-auto">
+          <h2> Text-Controlled Dance Editing </h2>
+        </div>
+    </section>
+    <div class="album text-center margin100 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
+                <source src="./assets/edit/Dancing_With_hand_high_163_196_w_audio.mkv" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <p class="card-text">Complete Dance with Text Instruction: "A person dances keeping hand high in air."</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-body-secondary"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
+                <source src="./assets/edit/166_343_jump_inbetween_w_audio.mkv" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <p class="card-text">In-Between Dance Editing with Instruction: "A person jumps" for 3-5 seconds</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-body-secondary"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
+                <source src="./assets/edit/dance_with_spin_082_2793_single_color_w_audio.mkv" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <p class="card-text">In-Between Dance Editing with Instruction: "A person spin at a place" for 3-5 seconds</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-body-secondary"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-8 col-md-8 mx-auto">
+            <h2> Special Applications
+            </h2>
+          </div>
+        </div>
+      </section>
+      <div class="album bg-body-tertiary">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 g-3">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/edit/lock_joints_031_343_w_audio.mkv" type="video/mp4">
+                </video>
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <b>Lower Body Constrained Dance Generation</b> <br/>
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-body-secondary"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/edit/longForm_w_audio_trim.mkv" type="video/mp4">
+                </video>
+                <div class="card-body">
+                  <p class="card-text"> <b>Long Dance Generation </b></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-body-secondary">This is one of the important application as the mask transformer model restricts model to generate motions longer than 10 seconds in a single forward pass.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
               <section class="py-5 text-center container">
                   <div class="col-lg-8 col-md-8 mx-auto">
-                    <h2> Music-Controlled Genre Specified Dance compared with SOTA 
+                    <h2> Comparison of SOTA methods with DanceMosaic 
                     </h2>
                   </div>
               </section>
